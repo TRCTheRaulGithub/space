@@ -1,0 +1,33 @@
+SPACE Plugin version 0.9b Written by Pascal Dallongeville (flemteam)
+
+This plugin supports severals view mode (windowed, fullscreen,
+docked and background) and is very customisable, enabled you to make
+many preset of your choice (like AVS).
+
+Dynamic Transform, customisable effects, preset support, good speed,
+lot of visualisation modes, ... Try It !!
+
+Strictly Minimum required configuration:
+- 486 DX
+- 16 Mo RAM
+- a mouse
+- 2D video card with directdraw and 16 bpp support (almost have)
+
+... but with this you can get maybe one frame per minuts :(
+
+Minimum recommended:
+- MMX Processor
+- 32 Mo of RAM
+- mouse
+- fast 2D video card for windowed mode
+
+Really recommended:
+- Celeron, PII 450 Mhz or better (to get 60 FPS+ in 400*300 FS "Vision Life")
+- 64 Mo RAM
+- TNT or better
+
+I recommend use this plugin with teknos, trance, dance or dream...
+and personally I think it looks best at at least 30 FPS
+up to 60 FPS (depending your feeling).
+
+you can contact me at: dallongevillep@hotmail.com

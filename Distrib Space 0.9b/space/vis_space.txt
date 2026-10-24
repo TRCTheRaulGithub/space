@@ -1,0 +1,331 @@
+SPACE Plugin version 0.9b Copyright 2000 by Pascal Dallongeville
+
+SPACE IS NOW INSTALLED ON YOUR COMPUTER !
+
+
+STARTING SPACE
+-------------
+Run Winamp, open up the preferences (CTRL+P), go to the Plugins/Visualization
+section, and select Space 0.9 as the visualization plug-in. Hit start. 
+
+WHAT IS SPACE ?
+---------------
+SPACE is a plugin between AVS and GEISS.
+You can choose yours effects, transformations, rendering and save
+your presets exactly like in AVS. But all effects can be choosing
+randomly by the plugin like in GEISS.
+This let you create a lot of differents cools presets of your choice.
+Once the plugin is started you can acces on a popup menu by right
+cliking on the window area of the plugin. This menu let you customise
+severals options.
+SPACE has severals advantages:
+- You have severals display modes (window, fullscreen, docks and BACKGROUND)
+- You can change the resolution of the render independently of
+your window size (for windowed mode), for instance: you can have
+a 800X600 window with a 320X200 rendered effects for better performance
+(but this need a fast video card for streched blit).
+- Mirror effects that speed up renderings
+- You can set all your preferences by a popup menu
+
+CONFIGURATION
+-------------
+From the popup menu you can:
+-Choose your display mode (Windowed, fullscreen, BACKGROUND ...)
+-Choose your resolution (in windowed and docked mode only)
+-Choose your speed (from slow to realtime)
+-Add, Remove, randomly choosing effects (Waveform, cerclewave, ...)
+-Choose your render (fade, clearscreen, fade & blur, blur, nothing ..)
+-Choose your transformation (enabled, disabled, randomly, ...)
+-Choose your mirror mode
+-Save, load and load randomly presets
+
+HOTKEYS
+-------
+* Any winamp key for control winamp
+* ESCAPE to quit plugin (fullscreen and dock mode)
+* F4 display FPS
+* Rightclick for acces to the menu
+(in top-left desktop corner for BACKGROUND mode, see NOTES section)
+
+DETAILS
+-------
+You can customize your effect from the popup menu, there is a lot
+of option you can set. I let you discover all the functionalities
+of Space Plugin, However if you don't understand some then let's
+me know and I will add futhers informations about configuration
+in next release.
+
+SYSTEM REQUIREMENTS
+-------------------
+you must have a directdraw compatible video card with a less directX 4.0
+and 16 bpp support with winamp installed on your computer.
+Older version (under 0.9) should works with directX 3.0
+
+Strictly Minimum required configuration:
+- 486 DX
+- 24 Mo RAM
+- 2D video card with directdraw support
+... but with this you can get maybe one frame per minuts :(
+
+Minimum recommended:
+- MMX Processor (run about 60 FPS on K6-2 300 320*200 "Vision Life" preset)
+- 32 Mo of RAM
+- fast 2D video card for windowed mode
+
+Really recommended:
+- PII 450 Mhz or better (to get 60 FPS+ in 400*300 FS "Vision Life" preset)
+- 64 Mo RAM
+- TNT or better
+
+I get about 65 fps with "Vision Life" Preset (slowest) on
+my celeron300@464, TNT2 M64 with 64 Mo RAM in 400*300 fullscreen resolution
+and 32 fps in 1024*768 with "Kalei Trip" preset (very cool). 
+
+NEW FEATURES
+------------
+Space 0.9:
+
+- Remove minors bugs
+- Remake the menu because of new feature, it is now harder to use :(
+(I plan to make a iunterface in AVS style to have fully configuration esaier)
+- Rewritted some blit procedure for better fit to window mode (?)
+- fixed some little bugs, now when your desktop is in 32bpp and Space works
+in fullscreen mode, it will turn on 16 bit mode when changing to windowed mode.
+Now Space works normally even if your desktop is not in 16 bpp when you launch it!
+- Added a rotozoom blit feature, which allow to have zoom and rotation reacting with
+the music. Unfortunatly rotation seems not works on my video card (TNT2) so
+I couldn't test it (wait your feedback ;) ).
+- Added 6 transformations: "HoriPersp", "VertiPersp", "CycloFlower", "Illusion",
+"SwirlOut" and "Implose". Renamed "RotoSun" transformation in "WaveSun".
+- Decompose somes transformations (Zoom in Zoomin and Zoomout ...)
+- Added LittleWave, LittleMath and GeoGraphe Effects
+- New Presets
+- Added a skin for winamp and a theme wor windows especially for background mode
+(the skins is in the /winamp/skins directory and the theme is located in the
+ /winamp/plugins/space directory)
+ 
+
+Space 0.82:
+
+- Remove Fast Trans (finally not very useful option and could lead to little bugs)
+- Speed Option has changed, now this is a fps limit
+- Fix bugs with blend slow and normal blur whan enabled with vertical mirror
+- Try to improve beat detecting
+- Some others minors corrections
+- effects has better reaction to the music (fading colour, size ...)
+- Some others minors corrections
+
+Space 0.81:
+
+- Fixed bad center point with transformation
+- Added Limit FPS option (in Speed Menu), this is very useful for "Randomly load
+Preset" or "Randomly Mirror" option !
+- Added Window size in the title in windowed mode
+- Little tweaks here and there (i get about 40 FPS in 512*384 FS with "Vision Life"
+preset and about 67 FPS in 400*300 FS on my celeron300@464 with TNT2 M64, but i
+must switch to 320*240 FS before to get best performance ?? strange !)
+- Addest Fast option for Transformation
+(few speed up on my celeron: up only to 72 FPS "Vision Life" preset 400*300 FS)
+- Remove "Water" and "RotoBrick" Transformation (not in the "Space" style ;) ! )
+
+Space 0.8:
+
+- Added RotaLines Effects
+- Added a lot of transformations
+- Added shift effects
+ (you can choose the direction of the shifting effects in transformation)
+- Add Random Load of presets
+- Fixed some minors bugs
+
+Space 0.7: (toward Space 0.6)
+
+- Fixed a stupid bug in MMX detection, now space will work on no MMX
+processor.
+- Added fullscreen mode detection
+- Added a option to select two type of color: primary or not ('primary' in effect
+menu) -> change the colors taken randomly in Space plugin
+- Little changing in confettis effects.
+- Change load/save Preset (now, it works with files)
+
+NOTES
+-----
+- you still have acces on the menu in fullscreen or background mode
+(for background mode: you can acces the popup menu by
+right-clicking in the left top corner of the desktop (you 'll see
+a little box where you can click), winamp window should not be
+minimize for it (if you have minimized winamp and restore it, you
+won't see the box in the left top corner but you always could
+right click on it).
+- if you get stranges colors try change to 15/16 bpp mode (Mode555).
+- Background mode doesn't works on all video cards, sometimes you get
+strange colours (TNT based video card, ...)
+- on some video card the blit function is size limited and doesn't
+work with very low resolution then some modes like little dock
+may appear incorrectly because it use a low resolution (observed
+on Ati Rage Pro based card). Others video card doesn't support blit
+at all, this mean that all windowed mode will be slower
+(windowed, normal dock and little dock) than others modes.
+- mirrors mode speed up things and look sometime pretty cool !
+- you can remove a preset you don't like just by deleting the
+preset space file (.spc)
+- Fast Trans may speed up transformations (I think more cache memory
+you processor have, more speed up you get...) but it looks a bit less cool :p
+
+TIPS
+----
+-> higher windows size means more video card power
+-> Higher resolution need more CPU power
+-> Fullscreen and background are the fastest modes (no big
+difference if you have a fast 2D video card (like TNT2).
+
+* I recommend use this plugin with teknos, trance, dance, hard or dream
+musics because is very depending of bass and beat you hear in the
+music (if music hasn't got any bass, SPACE won't react a lot) and personally
+I think it look best between 30 and 60 FPS.
+You should try thz background mode with the skin for winamp and theme for window
+(you need the support of themes for window to try it) located in the 
+/winamp/plugin/space directory, have fun !!
+
+If your computer is too slow, you can try speed up things by:
+- choosing AUTO/2 resolution (for windowed mode)
+- lower resolution fullscreen mode or 160*100 in background mode
+if your video can support it and if your computer is very slow..
+- choosing mirror mode (vertical the slowest, double is fastest),
+- choosing normal or fast blur instead of slow 
+- drop blur rendering ... (and choose fadeout instead)
+- Change Computer ;) 
+- Somes presets are a lot faster than others: "Fast graph" is very fast, 
+ "Bass Trip" is slow because "Fast Grpah" do not use Blur nor transformation
+ unlike "Bass Trip".
+
+-If you notice tearing with Space Plugin in fullscreen, try to increase
+the refresh rate of directdraw.
+For that , go in the "program files\directx\setup" directory an choose
+"complementary help" section (the last) and click on the "change" button
+(below "msinfo" button), then check the "change by the value" radio button
+and fill the edit box to set the new value.
+!!!!! ->Be carefull !!
+You must set a value than your monitor should support (I have
+set it to 120 Hz because my monitor could support 140 Hz in 1024*768 and
+I don't use directdraw to resolution higher than 1024*768 in my plugin)
+the default value is 60 Hz, my old 15'' works at 87 Hz in 1024*768.
+If you set this value at 100 and that your monitor doesn't support higher
+than 640*480 at 100 hz, then you won't be able to see higher screen than
+640*480 in directdraw.
+However for disabled most tearing, I recommend to set this value at 100 Hz, but
+don't set this value if you aren't sure your monitor can support it.
+
+-You can decrease tearing too by changing the speed of the plugin, try to adjust
+to a value  that seems without (or with few) tearing.
+
+KNOW BUGS
+---------
+- With windows 2000 in windowed mode, when the size of the windows
+is less than 16X16, this give glichts on the desktop (problem of
+clipper size i think).
+- Sometimes with Win2000 when winamp windows is shade and in normal
+size the little dock looks like winamp shade in double size
+(don't know why !)
+
+There are surely others and if you find one, please let me know, thanx !
+
+FAQ
+---
+- Why I can't change option in background mode ?
+
+When Space is in background mode, his window is located at the top left corner
+of your desktop and you should keep in mind that winamp window mustn't be 
+minimized for acces to space window. This is a little window of 10 * 10 pix
+and if you want change option of Space you should right click on it. If you
+press F4 and fps doesn't appears, this mean that space window hasn't focus, click
+on the top left corner of our desktop (even if you don't see anything, there is
+the space window) for give focus to the window and press F4.
+
+- Why I get strange colors ?
+
+Have you tried to check (uncheck) mode555 option in the Display Mode Menu ?
+Sometimes in background mode the colors can be wrong because your video
+card doesn't support the RGB or YUV overlay function. I haven't idea to fix this 
+problem without a big loss of speed... If you have, then say me. Thanx
+
+- Why Space is slower than Geiss ?
+
+Because you use Geiss in 8 bit mode and 8 bit mode is a lot faster than 16 bit mode,
+and I should reconize than Geiss is very optimised (I would like to know how is
+their map transformation procedure ;) ... ).
+However 16 bit mode give the possibility to display more color with blur and fadeout
+and it is supported by almost video card (this isn't the case of 24 or 32bpp).
+But I have noticed than Geiss could be slower than Space (even in 8 bpp) on slower
+computer like K6-233, I don't know why ...
+
+- Why resolution "AUTO/2" is slower than "AUTO" which calculate 4 more times data ?
+
+Because resolution different than "AUTO" use the Streched blit functionality and
+some video card haven't got this capabilities (Sis, Cirrus, ...). In this case
+use only "AUTO" resolution for better performance.
+
+- When I run the plugin in FULLSCREEN MODE, i get a messagebox saying:
+'SetCooperativeLevel DDSCL_EXCLUSIVE|DDSCL_FULLSCREEN: DDERR_HWNDALREADYSET' ?
+
+Make sure you're not using the DIRECTSOUND output plugin underneath Winamp... 
+you have to use the WAVEOUT output plugin.
+
+- I have only few resolution than appear for the FULLSCREEN MODE, and I am sure my
+video card support more video mode.
+
+Be sure that directdraw is correctly installed, reinstall directx to make sure.
+note that you need directX 4 in order Space works (since version 0.9)
+
+GREETINGS
+---------
+- Thanks to Soren (from Acidspunk) for all his help about transformations
+- Thanks to Safai and tosca for the problem with pitch
+- Thanks To M.Geiss for his great Geiss.txt ;)))
+- And thank you for using my plugin
+
+CONTACT
+------
+The web site has always the lastest version of Space plugin:
+http://www.multimania.com/scalpel/programmation.html
+
+If you have any ideas of effects, suggestions, if you find bug(s)
+or have suggestions please send me an email.
+IF you have cool Space presets, send me them and I will add them in next release
+of Space.
+
+mail: dallongevillep@hotmail.com
+
+If you like it, send money at:
+
+Pascal Dallongeville
+18 rue Marcel Poulin
+60400 CRISOLLES
+FRANCE
+
+It's free but i will be very happy if you give me some (i'm poor) :) !
+
+TERMS OF USE / COPYRIGHT INFORMATION / PUBLIC DISPLAY
+-----------------------------------------------------
+SPACE is totally free for personal use. No registration is required.
+Any commercial use of this program, however, requires the consent of the
+author. For large ventures this will involve a licensing fee.  Be wary
+that every image or video sequence generated with this program is the sole
+copyright of Pascal Dallongeville and can not be reproduced or displayed in public
+without permission.
+
+LICENSE AGREEMENT
+-----------------
+You may personally use and copy SPACE freely.  However, you may NOT charge
+money for distributing SPACE. SPACE is free, So don't try to sell it
+unless you email me and send me a lot of cash first ;)
+
+DISCLAIMER
+----------
+The author is not responsible for any damages or loss of data that
+occur to your system for using SPACE.  SPACE is distributed freely, and
+if you choose to use SPACE, you take all risk on yourself.  If your
+system appears to have problems when SPACE is run, you should immediately
+discontinue using SPACE.  The author is also not responsible for any
+damages to YOU for watching or using SPACE.  If you are epileptic,
+have a weak heart, or have any other conditions which might make using
+this program dangerous to your health, you should not use this program.
