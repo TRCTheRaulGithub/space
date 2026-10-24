@@ -1,0 +1,30 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: space - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP1C4.TMP" with contents
+[
+ddraw.lib kernel32.lib user32.lib gdi32.lib advapi32.lib comdlg32.lib dxguid.lib /nologo /dll /pdb:none /machine:I386 /out:"c:\progra~1\winamp\plugins\vis_space.dll" /implib:"Release/vis_space.lib" 
+".\Release\graph.obj"
+".\Release\Objet_Effet.obj"
+".\Release\Objet_Space.obj"
+".\Release\Objet_Transformations.obj"
+".\Release\Winamp_Space.obj"
+".\Release\space.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP1C4.TMP"
+<h3>Output Window</h3>
+Linking...
+   Creating library Release/vis_space.lib and object Release/vis_space.exp
+
+
+
+<h3>Results</h3>
+vis_space.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

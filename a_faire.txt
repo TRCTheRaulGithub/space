@@ -1,0 +1,54 @@
+->la possibilité d'avoir plusieurs transformations à la fois (on recalcul des coordonnées déjà calculées)
+->des nouveaux effets dont les lignes transparentes et les particules types cercle qui zooment sur les basse
+->refaire le change effect pour qu'il y ait moins d'effets simultanée à l'écran et mieux choisie (avec des switch ?)
+->un graphe qui dessine des motifs (commençé sur punkie)
+->faire interface style avs pour la configuration (en cliquant bouton gauche)
+idée de fenêtre (interface) à laquelle il faudrait un menu équivalant au menu option (pour les modes, ...):
+
+	nom effet à configurer 		Params du type 1 		Params du type 2
+				    (accessible par menu popup)		(extra)
+Effets:				|	peut-être très différent|	peut-être très différent
+  -Waveform			| 	selon type effet	|	type, ex:
+  -cerclewave			|	ex:			|	waveform: couleur (menu popup)
+  -basscercle			|	nombre (menu popup)	|	waveform: angle dep: (edit box)
+  -...				|	choose randomly	(radio)	|	waveform: move (bouton radio)
+Render:				|				|	
+  -Blur				|	enabled(radio button)	|	trans: coef zoom (slide bar)
+  -FadeOut			|				|	trans: angle
+Trans:				|	type (menu popup)	|	
+  -Maps				|	(pour le blur se sera   |
+  -BlitZoom			|	fast, normal ou slow)   |
+
+...
+
+->des nouvelles transformations...
+->débuger le background pour qu'il marche sur les tnts
+->changement de mirror, effets, blur, ... sur les beats (surtout mirrors )
+->voir si moyen de précalculer la transformation du preset suivant (procédure à part) et déviter de tomber sur le preset 'Space'
+->voir pour un effet en relief 3D (avec lunnettes) si possible ...
+->mettre dans le makepimp le skin et le thème window pour le mode backgrouns
+->débuger le background pour qu'il marche sur les tnts
+et qu'il ne foire pas lorsque l'on change le bpp
+->changement de mirror, effets, blur, ... sur les beats (surtout mirrors )
+->background mode: changer la couleur de fond en vert et la police des icônes temporairement et mettre aucun background
+->beatdetection, essayer de mixer cette routine en l'améliorant un peu:
+
+A very simple method is to sum all samples above or under the silence level. If the absolute sum exceeds some threshold, it may have been a bass or bass drum.
+Below is the code to calculate the sum. Put it in the the render function of a vis plugin and make sure you get the waveformdata. Of course, the code is too simple, because it only checks the left channel, uses a fixed threshold etc., but maybe you can use it.
+int x, data1, sum = 0, threshold = 4000;
+for (x = 0; x < 576; x++)
+{
+data1 = ((this_mod->waveformData[0][x]^128)>>(this_mod->nCh-1)) - 64;
+if ((sum ^ data1) & 0x8000) // check if sign is different
+sum = 0;
+
+sum = sum + data1;
+if ((sum > threshold) | | (sum < -threshold))
+{ // May be a beat, do something...
+}
+}
+
+->décomposer la trans zoom en zoomIn et zoomOut
+->ajouter la trans style geiss dont la formule est: "d=0.93*d*(cos(r)+4)/5.0" (d = distance, et r = angle, coord. polaires)
+->n'optimiser, noptimiser, noptimiser !!!
+->débugger, débugger, débugger !!!

@@ -1,0 +1,37 @@
+# Microsoft Developer Studio Generated Dependency File, included by space.mak
+
+.\graph.cpp : \
+	".\graph.h"\
+	
+
+.\Objet_Effet.cpp : \
+	".\graph.h"\
+	".\objet_effet.h"\
+	".\objet_transformation.h"\
+	
+
+.\Objet_Space.cpp : \
+	".\graph.h"\
+	".\objet_effet.h"\
+	".\objet_space.h"\
+	".\objet_transformation.h"\
+	".\Vis.h"\
+	
+
+.\Objet_Transformations.cpp : \
+	".\graph.h"\
+	".\objet_effet.h"\
+	".\objet_transformation.h"\
+	
+
+.\Winamp_Space.cpp : \
+	".\graph.h"\
+	".\objet_effet.h"\
+	".\objet_space.h"\
+	".\objet_transformation.h"\
+	".\Vis.h"\
+	
+
+.\space.rc : \
+	".\bitmap1.bmp"\
+	
